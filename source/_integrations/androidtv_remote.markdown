@@ -244,6 +244,9 @@ Other:
 
 If `activity` is specified in `remote.turn_on` it will open the specified URL or the application with the given package name. See [Launching apps section](#launching-apps).
 
+To send text as input to the device you have to add the text to the command prefixed with `input text: `, e.g. the command `input text: hello world` sends `hello world` to the device as input.
+This allows you to fill text fields as if it was typed using the keyboard. It requires the on-screen keyboard to be closed first.
+
 Example actions:
 
 ```yaml
@@ -265,6 +268,14 @@ target:
   entity_id: remote.living_room_tv
 ```
 
+```yaml
+# Send text to the device
+action: remote.send_command
+data:
+  command: input text: hello world
+target:
+  entity_id: remote.living_room_tv
+```
 ```yaml
 # Launch YouTube
 action: remote.turn_on
