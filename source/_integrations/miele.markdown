@@ -20,10 +20,7 @@ The Miele integration allows users to integrate their home appliances using the 
 ## Use cases
 
 - Monitor the multiple sensors of the appliance and trigger automations based on these sensors.
-- Start programs on your appliances from your dashboard.
 - Monitor the program status of the appliances.
-- Control the light of your appliances.
-- Adjust the appliance settings.
 
 {% note %}
 Note that the feature availability depends on the appliance model.
@@ -69,7 +66,8 @@ The integration configuration will ask for the *Client ID* and *Client Secret* c
 
 {% note %}
 
-- The entities availability depends on the appliance type and the generation of the product, and the appliance might not support all the entities for its type.
+- The entities' availability depends on the appliance type and the generation of the product, and the appliance might not support all the entities for its type.
+- Products from professional and semi-professional series are generally not supported due to limitations in the Miele 3rd party API.
 - Some appliances don't report data while they are turned off, so corresponding entities will not appear in the Miele integration after loading until the appliances are turned on.
 {% endnote %}
 
@@ -78,8 +76,8 @@ The integration configuration will ask for the *Client ID* and *Client Secret* c
 {% details "List of sensors" %}
 
 - **Operation state**:
-  - **Status**: Represents the current operation state of the device.
-  - **Availability**: Represents that current connection status for the device.
+  - **Status**: Represents the current operation state of the device. The default entity name is just the appliance type e.g. "Dishwasher".
+  - **Temperature**: Represents current temperature in refrigerators, freezers and ovens. Entities are created for up to 3 zones depending on the device capabilities.
 {% enddetails %}
 
 ## Automation examples
@@ -97,7 +95,7 @@ alias: "Notify when program ends"
 triggers:
   - trigger: state
     entity_id:
-      - sensor.washing_machine_status
+      - sensor.washing_machine
     to: program_ended
 actions:
   - service: notify.notify
