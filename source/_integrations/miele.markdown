@@ -15,9 +15,9 @@ ha_platforms:
 ha_integration_type: integration
 ---
 
-The Miele integration allows users to integrate their home appliances using the [official 3rd party API](https://www.miele.com/developer).
+The Miele {% term integrations %} allows users to integrate their home appliances using the [official 3rd party API](https://www.miele.com/developer).
 
-Miele is known as a manufacturer of premium appliances for cooking, laundry care and floorcare.
+Miele is known as a manufacturer of premium appliances for cooking, laundry care, and floorcare.
 
 ## Use cases
 
@@ -78,7 +78,7 @@ The integration configuration will ask for the *Client ID* and *Client Secret* c
 {% details "List of sensors" %}
 
 - **Operation state**:
-  - **Status**: Represents the current operation state of the device. The default entity name is just the appliance type, e.g., "Dishwasher".
+  - **Status**: Represents the current operation state of the device. The default entity name is just the appliance type. For example, "Dishwasher".
   - **Temperature**: Represents the current temperature in refrigerators, freezers, and ovens. Entities are created for up to 3 zones depending on the device capabilities.
 {% enddetails %}
 
@@ -134,7 +134,7 @@ Unavailable entities can have multiple causes:
 - The appliance is experiencing a network issue.
 - The Miele API is experiencing issues.
 
-##### Solution
+##### Resolution
 
 To try to solve the above issues, follow these steps:
 
