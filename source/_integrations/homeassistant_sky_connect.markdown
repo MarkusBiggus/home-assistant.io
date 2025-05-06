@@ -35,7 +35,7 @@ The Home Assistant Connect ZBT-1 ships with a full-fledged Zigbee firmware. At t
 
 Normally, there is no need to re-install the firmware. Firmware updates for the Connect ZBT-1 are natively supported in Home Assistant 2025.4 and newer if you are running the ZHA integration or OTBR.
 
-If your Home Assistant installation has no add-ons available, you can use the web flasher below to install the latest firmware version for Home Assistant Connect&nbsp;ZBT-1 directly from your browser over USB.
+If you are not using ZHA or OTBR, you can use the web flasher below to install the latest firmware version for Home Assistant Connect&nbsp;ZBT-1 directly from your browser over USB.
 
 ### Prerequisites
 
