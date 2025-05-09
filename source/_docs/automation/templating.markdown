@@ -1,30 +1,34 @@
 ---
-title: "Automation trigger variables"
-description: "List all available variables made available by triggers."
+title: "Automation Templates"
+description: "List all trigger variables available to templates."
 ---
 
-Automations support [templating](/docs/configuration/templating/) in the same way as scripts do. In addition to the [Home Assistant template extensions](/docs/configuration/templating/#home-assistant-template-extensions) available to scripts, the `trigger` and `this` template variables are available.
+Automations support the advanced features of [templating](/docs/configuration/templating/) in the same way as scripts do. In addition to the [Home Assistant template extensions](/docs/configuration/templating/#home-assistant-template-extensions) available to scripts, the `trigger` and `this` template variables are available for automations.
 
-The template variable `this` is also available when evaluating any `trigger_variables` declared in the configuration.
+```
+ {{ this.name }} is the name of the entity whose event fired the trigger
+ {{ trigger.platform }} is the name of the type of trigger object, like `calendar`
+ ```
 
-## Available `this` data
+## Available state data
 
 The variable `this` is the [state object](/docs/configuration/state_object) of the automation at the moment of triggering the actions. State objects also contain context data which can be used to identify the user that caused a {% term script %} or {% term automation %} to execute. Note that `this` will not change while executing the {% term actions %}.
 
 ## Available trigger data
 
-The variable `trigger` is an object that contains details about which {% term trigger %} triggered the automation.
+The variable `trigger` is an object that contains details about which {% term platform %} triggered the automation.
 
 Templates can use the data to modify the actions performed by the automation or displayed in a message. For example, you could create an automation that multiple sensors can trigger and then use the sensor's location to specify a light to activate; or you could send a notification containing the friendly name of the sensor that triggered it.
 
-Each [trigger platform](/docs/automation/trigger/#event-trigger) can include additional data specific to that platform.
+Each [trigger](/docs/automation/trigger/#event-trigger) platform includes additional data specific to that platform.
 
 ### All
 
-Triggers from all platforms will include the following data.
+Triggers from all platforms will include the following properties.
 
 | Template variable | Data |
 | ---- | ---- |
+| `trigger.platform` | Trigger object type.
 | `trigger.alias` | Alias of the trigger.
 | `trigger.id` | The [`id` of the trigger](/docs/automation/trigger/#trigger-id).
 | `trigger.idx` | Index of the trigger. (The first trigger idx is `0`.)
