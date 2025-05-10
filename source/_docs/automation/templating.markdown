@@ -159,7 +159,7 @@ These are the properties available for a [Sun trigger](/docs/automation/trigger/
 
 ### Tag
 
-These are the properties available for a [Tag trigger](/docs/automation/trigger/#tag-trigger). 
+These are the properties available for a [Tag trigger](/docs/automation/trigger/#tag-trigger).
 
 | Template variable | Data |
 | ---- | ---- |
