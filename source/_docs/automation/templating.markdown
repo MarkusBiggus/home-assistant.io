@@ -6,6 +6,7 @@ description: "List all trigger variables available to templates."
 Automations support the advanced features of [templating](/docs/configuration/templating/) in the same way as scripts do. In addition to the [Home Assistant template extensions](/docs/configuration/templating/#home-assistant-template-extensions) available to scripts, the `trigger` and `this` template variables are available for automations.
 
 Example of variables used in templates:
+
 ```jinja
  {{ this.name }} is the name of the automation executing from this trigger
  {{ trigger.platform }} is the type of trigger object, like `calendar`
@@ -70,10 +71,10 @@ These are the properties available for an [Event trigger](/docs/automation/trigg
 
 | Template variable | Data |
 | ---- | ---- |
-| `trigger.platform`       | Hardcoded: `event`       |
-| `trigger.event`          | Event object that matched. |
-| `trigger.event.event_type` | Event type.              |
-| `trigger.event.data`     | Optional event data.     |
+| `trigger.platform`       | Hardcoded: `event`
+| `trigger.event`          | Event object that matched.
+| `trigger.event.event_type` | Event type.
+| `trigger.event.data`     | Optional event data.
 
 ### Geolocation
 
@@ -130,9 +131,9 @@ These are the properties available for a [Sentence trigger](/docs/automation/tri
 | Template variable | Data |
 | ---- | ---- |
 | `trigger.platform` | Hardcoded: `conversation`
-| `trigger.sentence` | Text of the sentence that was matched. |
-| `trigger.slots`    | Object with matched slot values. |
-| `trigger.details`  | Object with matched slot details by name, such as [wildcards](/docs/automation/trigger/#sentence-wildcards). Each detail contains: <ul><li>`name` - name of the slot</li><li>`text` - matched text</li><li>`value` - output value (see [lists](/docs/voice/intent-recognition/template-sentence-syntax/#lists))</li></ul>. |
+| `trigger.sentence` | Text of the sentence that was matched.
+| `trigger.slots`    | Object with matched slot values.
+| `trigger.details`  | Object with matched slot details by name, such as [wildcards](/docs/automation/trigger/#sentence-wildcards). Each detail contains: <ul><li>`name` - name of the slot</li><li>`text` - matched text</li><li>`value` - output value (see [lists](/docs/voice/intent-recognition/template-sentence-syntax/#lists))</li></ul>.
 | `trigger.device_id` | The device ID that captured the command, if any.
 
 ### State
