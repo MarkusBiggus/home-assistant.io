@@ -64,7 +64,7 @@ Inherites template variables from [event](#event) or [state](#state) template ba
 
 ### Event
 
-An [Event](/docs/configuration/events/) trigger is fired each time an {% term entity %} state changes.
+An [Event](/docs/configuration/events/) trigger is fired each time an {% term entity %} state changes or an event matching the configured event_type occurs.
 
 These are the properties available for an [Event trigger](/docs/automation/trigger/#event-trigger). 
 
