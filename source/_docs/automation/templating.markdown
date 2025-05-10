@@ -6,7 +6,7 @@ description: "List all trigger variables available to templates."
 Automations support the advanced features of [templating](/docs/configuration/templating/) in the same way as scripts do. In addition to the [Home Assistant template extensions](/docs/configuration/templating/#home-assistant-template-extensions) available to scripts, the `trigger` and `this` template variables are available for automations.
 
 Example of variables used in templates:
-```
+```jinja
  {{ this.name }} is the name of the automation executing from this trigger
  {{ trigger.platform }} is the type of trigger object, like `calendar`
  ```
@@ -88,7 +88,7 @@ These are the properties available for a [Geolocation trigger](/docs/automation/
 
 ### Home Assistant
 
-The Home Assistant trigger is recomended for automations instead of [homeassistant_start or homeassistant_stop events](/docs/configuration/events/#homeassistant_start-homeassistant_started).
+The Home Assistant trigger is recommended for automations instead of [homeassistant_start or homeassistant_stop events](/docs/configuration/events/#homeassistant_start-homeassistant_started).
 
 These are the properties available for a [Home Assistant trigger](/docs/automation/trigger/#home-assistant-trigger). 
 
