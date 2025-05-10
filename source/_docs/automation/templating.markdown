@@ -70,10 +70,10 @@ These are the properties available for an [Event trigger](/docs/automation/trigg
 
 | Template variable | Data |
 | ---- | ---- |
-| `trigger.platform` | Hardcoded: `event`
-| `trigger.event` | Event object that matched.
-| `trigger.event.event_type` | Event type.
-| `trigger.event.data` | Optional event data.
+| `trigger.platform`       | Hardcoded: `event`       |
+| `trigger.event`          | Event object that matched. |
+| `trigger.event.event_type` | Event type.              |
+| `trigger.event.data`     | Optional event data.     |
 
 ### Geolocation
 
